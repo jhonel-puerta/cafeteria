@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:lottie_rawRes="@raw/explocion_chrismas"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Inicar Sesion"
+        android:textColor="#212F3D"
+        android:textSize="40dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image"
+        android:layout_below="@id/tittle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:lottie_rawRes="@raw/bicicleta"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="20dp"
+        android:layout_below="@id/image"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_edittext"
+        android:hint="Nombre"
+        android:padding="5dp"
+        android:textColor="#212F3D"
+        android:textColorHint="#D76D4C41">
+    </EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/name"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:background="@drawable/login_edittext"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textColorHint="#D76D4C41">
+    </EditText>
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:onClick="ingresar"
+        android:textStyle="bold"
+        android:textColor="#F4D03F"
+        android:text="Iniciar"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/password"
+        android:background="@drawable/color_btn_brown"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_height="60dp">
+    </Button>
+
+</RelativeLayout>
+

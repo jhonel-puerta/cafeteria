@@ -1,0 +1,681 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:Android="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/cont_header"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:textColor="#2C3E50"
+                    android:text="@string/name_user"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <ImageButton
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shop">
+                </ImageButton>
+
+                <ImageButton
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/user">
+                </ImageButton>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/level_user"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/cont_header"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/gold_level"
+                android:backgroundTintMode="add"
+                android:text="Gold"
+                android:textColor="@color/white">
+            </Button>
+
+            <EditText
+                android:id="@+id/buscador"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text"
+                android:layout_below="@id/level_user"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:hint="Buscar">
+
+            </EditText>
+
+            <HorizontalScrollView
+                android:id="@+id/favoritos"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/buscador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/section"
+                android:elevation="5dp"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                //contenedor principal de la seccion recent
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:text="Ayer"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    //contenedor orizontal para los productos
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="30dp">
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/cont_product"
+                            android:elevation="5dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:background="@drawable/cafe"
+                                android:clipToOutline="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:scaleType="center"
+                                android:adjustViewBounds="true"
+                                >
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/recent1"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                            <TextView
+                                android:text="Bebida caliente"
+                                android:textSize="15dp"
+                                android:textStyle="normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <Button
+                                android:text="S/7.90"
+                                android:textColor="#6D4C41"
+                                android:background="@drawable/btn_product"
+                                android:layout_width="80dp"
+                                android:layout_height="20dp">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="130dp"
+                            android:layout_height="160dp"
+                            android:background="@drawable/cont_product"
+                            android:elevation="10dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/frape1"
+                                android:scaleType="center"
+                                android:adjustViewBounds="true"
+                                android:backgroundTintMode="multiply"
+                                >
+
+                            </ImageView>
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:text="-30%"
+                                android:textStyle="normal"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="5dp"
+                                android:textColor="@color/white"
+                                android:background="@drawable/descount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/recent2"
+                                android:text="Frape de cafré"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                            <TextView
+                                android:text="Bebida fria"
+                                android:textSize="15dp"
+                                android:textStyle="normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <Button
+                                android:text="S/10"
+                                android:textColor="#6D4C41"
+                                android:background="@drawable/btn_product"
+                                android:layout_width="80dp"
+                                android:layout_height="20dp">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/cont_product"
+                            android:elevation="5dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/coctel"
+                                android:scaleType="center"
+                                android:adjustViewBounds="true"
+                                android:backgroundTintMode="multiply"
+                                >
+
+                            </ImageView>
+
+                            //title
+                            <TextView
+                                android:id="@+id/recent3"
+                                android:text="coctel de café"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                            <TextView
+                                android:text="Bebida fria"
+                                android:textSize="15dp"
+                                android:textStyle="normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <Button
+                                android:text="S/5"
+                                android:textColor="#6D4C41"
+                                android:background="@drawable/btn_product"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp">
+
+                            </Button>
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/ver_mas"
+                                android:text="ver más"
+                                android:elevation="30dp"
+                                android:shadowColor="@color/white"
+                                android:textStyle="bold"
+                                android:textColor="#85C1E9"
+                                android:layout_centerInParent="true">
+                            </Button>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnRevertir"
+                        android:text="Revertir compra"
+                        android:background="@drawable/revertir_btn"
+                        android:textColor="#F4D03F"
+                        android:textSize="12dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </Button>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/cont_info"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:layout_below="@id/favoritos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Beneficios de las naranjas para tu salud"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <ImageButton
+                        android:alpha="0.3"
+                        android:background="@drawable/exs"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp">
+                    </ImageButton>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    //linea de color
+                    <ImageView
+                        android:background="@drawable/line"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:text="Por su bajo índice glucémico, la naranja es una
+de las frutas aconsejadas para la prevención
+de la diabetes. Su alto contenido en vitamina C
+estimula la producción de glóbul... Leer más"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/ij"
+                        android:background="@drawable/naranja"
+                        android:layout_width="130dp"
+                        android:layout_height="80dp">
+
+                    </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            //top mañaneros
+
+            <HorizontalScrollView
+                android:id="@+id/top"
+                android:layout_marginTop="40dp"
+                android:layout_below="@id/cont_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/section"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:text="Top 10 - Hoy!!"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#2C3E50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    //contenedor orizontal para los productos
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="30dp">
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/cont_product"
+                            android:elevation="5dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="10dp">
+
+                            <ImageView
+                                android:clipToOutline="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/queue_vainilla"
+                                android:scaleType="center"
+                                android:adjustViewBounds="true"
+                                android:backgroundTintMode="multiply"
+                                >
+
+                            </ImageView>
+
+                            <TextView
+                                android:text="queque de vainilla "
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                            <TextView
+                                android:text="Queues"
+                                android:textSize="15dp"
+                                android:textStyle="normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <Button
+                                android:text="S/7.90"
+                                android:textColor="#6D4C41"
+                                android:background="@drawable/btn_product"
+                                android:layout_width="80dp"
+                                android:layout_height="20dp">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/cont_product"
+                            android:elevation="10dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/queque_naranja"
+                                android:scaleType="center"
+                                android:adjustViewBounds="true"
+                                android:backgroundTintMode="multiply"
+                                >
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:text="queque de naranja"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                            <TextView
+                                android:text="Queues"
+                                android:textSize="15dp"
+                                android:textStyle="normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <Button
+                                android:text="S/10"
+                                android:textColor="#6D4C41"
+                                android:background="@drawable/btn_product"
+                                android:layout_width="80dp"
+                                android:layout_height="20dp">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/cont_product"
+                            android:elevation="5dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="10dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/coctel"
+                                android:scaleType="center"
+                                android:adjustViewBounds="true"
+                                android:backgroundTintMode="multiply"
+                                >
+
+                            </ImageView>
+
+                            //title
+                            <TextView
+                                android:text="coctel de café"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                            <TextView
+                                android:text="Bebida fria"
+                                android:textSize="15dp"
+                                android:textStyle="normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <Button
+                                android:text="S/5"
+                                android:textColor="#6D4C41"
+                                android:background="@drawable/btn_product"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp">
+
+                            </Button>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/ver_mas"
+                                android:text="ver más"
+                                android:elevation="30dp"
+                                android:shadowColor="@color/white"
+                                android:textStyle="bold"
+                                android:textColor="#85C1E9"
+                                android:layout_centerInParent="true">
+                            </Button>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top categorías"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp">
+
+                </TextView>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:flexWrap="wrap"
+                    app:alignItems="center"
+                    app:alignContent="space_between" >
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/frape1"
+                        app:layout_flexGrow="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/section"
+                        android:adjustViewBounds="true"
+                        android:tooltipText="jhonel">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/chocolate"
+                        app:layout_flexGrow="1"
+                        android:layout_margin="10dp"
+                        Android:adjustViewBounds="true"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/jugo_naranja"
+                        app:layout_flexGrow="1"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/coctel"
+                        app:layout_flexGrow="1"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/queque_naranja"
+                        app:layout_flexGrow="1"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/queue_vainilla"
+                        app:layout_flexGrow="1"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/infusioncaliente"
+                        app:layout_flexGrow="1"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

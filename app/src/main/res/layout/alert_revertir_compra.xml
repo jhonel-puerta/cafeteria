@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:theme="@style/NewDialog"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_marginBottom="30dp"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:id="@+id/title"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#F39C12"
+            android:text="Revertir Compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:id="@+id/boxPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"
+                android:text="S/."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textSize="80dp"
+                android:textStyle="bold"
+                android:textColor="#58D68D"
+                android:text="22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/boxPrice"
+            android:id="@+id/boxDesc"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="18dp"
+                android:text="Ordenará lo siguiente:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2C3E50"
+                android:textStyle="italic">
+            </TextView>
+
+            //contenedor de los productos de forma orizontal para ver el descuento
+            <LinearLayout
+                android:id="@+id/boxProduct"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18dp"
+                    android:text="café:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic">
+                </TextView>
+
+                //descuento
+
+                <TextView
+                    android:textSize="18dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18dp"
+                    android:text="Frape de café "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic">
+                </TextView>
+
+                <TextView
+                    android:text="-30%"
+                    android:textStyle="normal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/descount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="18dp"
+                    android:text="coctel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic">
+                </TextView>
+
+                <TextView
+                    android:textSize="18dp"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_below="@id/boxDesc"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="8dp"
+            android:background="#BF939393">
+
+        </View>
+
+        <TextView
+            android:id="@+id/pagar"
+            android:layout_below="@id/view"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textColor="#DF808B96"
+            android:text="Selecciona como quieres pagar."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <Button
+            android:id="@+id/btnPuntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pagar"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_button"
+            android:elevation="50dp"
+            android:paddingHorizontal="20dp"
+            android:text="puntos 582"
+            android:textColor="#5DADE2">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnEfectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pagar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/green_button"
+            android:elevation="30dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="@color/black"
+            android:text="Efectivo s/.22"
+            android:textColor="#58D68D">
+
+        </Button>
+
+        <TextView
+            android:layout_below="@id/btnPuntos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:text="Tienes 528 Puntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#DF808B96">
+        </TextView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
